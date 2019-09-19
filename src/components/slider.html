@@ -1,0 +1,24 @@
+<div>
+	<span ng-repeat = "color in larray|limitTo:1">
+	  <span class = "lcolor fa fa-circle" >
+		  {{color.likes}}<span class = "dcolor fa fa-circle"> {{color.dislikes}}</span>
+		</span>
+	</span>
+	<div class = "cat-slider">
+	  <div class = "slide" ng-repeat = "image in images" ng-show = "image.visible">
+			<!-- <img ng-src="{{image.src}}" class="style" /> -->
+	  </div>
+		<div class = "arrows">
+		  <a href="" ng-click = "prev()"> <!-- href="#"-->
+			  <img src = "/./src/images/left_arrow.png" class ="prev"/>
+			</a>
+			<a href="" ng-click = "next()"> <!-- href="#"-->
+				<img src = "/./src/images/right_arrow.png" class = "next"/>
+			</a>
+		</div>
+  </div>
+	<div>
+		<button class = "fa fa-thumbs-up" ng-click = "like()" ></button>
+		<button class = "fa fa-thumbs-up" id = "rotate" ng-click = "dislike()"></button>
+	</div>
+</div>
